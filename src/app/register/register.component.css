@@ -1,0 +1,9 @@
+.card {
+    height: 410px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 430px;
+    /* background-color: rgba(66, 70, 199, 0.7) !important; */
+    background: hsla(205, 46%, 30%, 1);
+    background: linear-gradient(90deg, hsla(205, 46%, 30%, 1) 0%, hsla(260, 29%, 36%, 1)100%);
+}

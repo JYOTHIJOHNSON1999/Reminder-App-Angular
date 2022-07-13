@@ -1,0 +1,13 @@
+
+
+table,tr,th{
+    border: 2px black solid;
+    padding: 10px;
+    /* margin-left: 800px; */
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+    background-color: rgb(101, 127, 169);
+    color: black;
+}

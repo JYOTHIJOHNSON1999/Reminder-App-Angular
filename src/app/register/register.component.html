@@ -1,0 +1,61 @@
+<!-- As a link -->
+<nav class="navbar navbar-light bg-dark ">
+    <a class="navbar-brand  " href="#" style="color:rgb(192, 194, 222);"><b>&#169; Reminder App </b></a>
+    <span class="quote text-light">Success is a journey not a destination...</span>
+</nav>
+<br>
+
+
+<div class="container col-md-12 mt-0">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header">
+				<h3 class="text-center">Sign Up</h3>
+				
+			</div>
+			<div class="card-body">
+				<form [formGroup]="registerForm" (ngSubmit)="register()">
+
+                    <div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<input type="text" class="form-control" name="uname" formControlName="uname" placeholder="USER NAME " id="login_accno" required>
+					</div>
+
+<div *ngIf="this.registerForm.get('uname')?.touched&&this.registerForm.get('uname')?.errors" style="color: yellow;">Invalid username</div>
+
+
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<input type="text" class="form-control" name="userid" formControlName="userid" placeholder="USER ID " id="login_accno" required>
+					</div>
+
+<div *ngIf="this.registerForm.get('userid')?.touched&&this.registerForm.get('userid')?.errors" style="color: yellow;">Invalid userid</div>
+
+
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						<input type="password" class="form-control" name="pswd" formControlName="pswd" placeholder="PASSWORD" id="register_password" required>
+					</div>
+
+
+<div *ngIf="this.registerForm.get('pswd')?.touched&&this.registerForm.get('pswd')?.errors" style="color: yellow;">Invalid password</div>
+				
+
+					<div class="form-group">
+						<input type="submit" value="Register" (click)="register()" class="btn float-right register_btn " style="width:30%" >
+					</div>
+
+				</form>
+			</div>
+
+            <p style="color:white;align-items:baseline;">Already existing user? <a routerLink="" style="color: yellow;" >Log In</a></p>
+			
+		</div>
+	</div>
+</div>
